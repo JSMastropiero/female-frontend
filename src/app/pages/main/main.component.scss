@@ -1,0 +1,277 @@
+@import "../../../styles/mixins.scss";
+
+.row {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.red {
+    color: red;
+}
+
+/* banner */
+
+section.banner {
+    // height: 40%;
+    // border: 1px solid #000099;
+    // background-color: #877333;
+    max-height: 512px;
+
+    owl-carousel-o {
+        img {
+            max-height: 512px;
+        }
+    }
+}
+
+::ng-deep {
+    .owl-theme .owl-nav [class*="owl-"] {
+        background: unset !important;
+    }
+
+    .owl-prev {
+        left: 2%;
+        @include arrow-left;
+    }
+
+    .owl-next {
+        right: 2%;
+        @include arrow-right;
+    }
+
+    .owl-prev,
+    .owl-next {
+        top: 40%;
+        position: absolute;
+        opacity: 0.8;
+    }
+}
+
+div.content {
+    background-color: var(--app-background-body);
+    margin-top: -20px;
+    padding: 55px 0 0 0;
+    
+    
+    height: 100%;
+    @include ev-simply-shadow;
+}
+
+section.margin{
+    margin: 0 16px;
+}
+
+.anchor {
+    display: flex;
+    height: 60px;
+    background-color: #f5f5ef;
+}
+
+.plax1 {
+    width: 100%;
+    height: auto;
+    background-image: url("/assets/images/plax.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 16px;
+    color: #f5f5ef;
+}
+
+.plax2 {
+    background-image: url("/assets/images/plax.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center, bottom;
+    color: white;
+}
+
+span.title-section {
+    text-align: left;
+    // background-color: #F5B3B7;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    padding: 20px 15px;
+    display: inline-block;
+    // border-radius: 74px 30px;
+    color: var(--app-text);
+    font-weight: 600;
+}
+
+.parent-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: unset;
+    @include ev-simply-shadow;
+
+    .card-image {
+        // width: 100%;
+        margin: auto;
+        height: 100%;
+        // overflow: hidden;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        background-position: 10%, bottom;
+        
+    }
+
+    h3{
+        font-weight: 700;
+    }
+}
+
+.parent-image:hover .card-image,
+.parent-image:focus .card-image {
+    transform: scale(1.1);
+}
+
+/* tables */
+.th,
+.r1,
+.r2 {
+    display: flex;
+    padding: 1rem;
+}
+.th {
+    font-weight: 600;
+}
+.r1 {
+    background-color: #f8f8f8;
+}
+.left {
+    text-align: left;
+}
+
+/* footer */
+
+footer {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    width: 100%;
+    background-image: url("/assets/images/footer.svg");
+    background-position-x: right;
+    background-repeat: no-repeat;
+    color: white !important;
+    padding: 60px;
+    // .container {
+    //     background-image: url("/assets/images/footer.svg");
+    //     color: white !important;
+    //     padding: 60px;
+    // }
+}
+
+.mb-1 img,
+.mb-0 img {
+    width: 25px;
+    margin: 10px;
+}
+
+.rounded-circle {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.articles {
+    // margin-top: 55px;
+}
+
+.articles .row {
+    padding-bottom: 20px;
+}
+
+.articles h3 {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.container-featurette {
+    margin: 50px;
+}
+
+.featurette > div {
+    display: grid;
+    align-items: end;
+}
+
+.featurette img {
+    width: 100%;
+    height: auto;
+}
+
+.featurette-divider {
+    color: #f5f5ef;
+}
+
+.featurette-text {
+    padding: 12px;
+}
+
+.parent-image-featurette {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-featurette {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    background-position: 10%, bottom;
+}
+
+.parent-image-featurette:hover .image-featurette,
+.parent-image-featurette:focus .image-featurette {
+    transform: scale(1.1);
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 5px;
+    }
+
+    50% {
+        margin-top: 15px;
+    }
+
+    to {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .table-min {
+        font-size: 12px;
+    }
+
+    .container-featurette {
+        margin: 15px;
+    }
+
+    .parent-image-featurette {
+        width: auto;
+        height: 200px;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,35 @@
+:root{
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #5E558C;
+    --secondary: #ebebe0;
+    --success: #035668;
+    --info: #3F81C7;
+    --warning: #0DE2EA;
+    --danger: #FF444F;
+    --light: #f5f5ef;
+    --dark: #223322;
+    // customs
+    --app-background: #c4bcca;
+    --app-background-body: #FFFFFF;
+    --app-nav: #FFFFFF;
+    --app-text: #000000;
+    --app-arrow: #e0e0e0;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --app-nav: #FFFFFF
+    }
+}

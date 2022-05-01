@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "./styles/colors.scss";
+@import "./styles/mixins.scss";
+
+body {
+    background-color: var(--app-background);
+    height: 100vh;
+}
