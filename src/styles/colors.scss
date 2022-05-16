@@ -21,11 +21,20 @@
     --light: #f5f5ef;
     --dark: #223322;
     // customs
-    --app-background: #c4bcca;
+    --app-background: #e4e2e7;
     --app-background-body: #FFFFFF;
+    --app-bg-tabs: #b9b9b9;
     --app-nav: #FFFFFF;
     --app-text: #000000;
+    --app-light-text: #666666;
     --app-arrow: #e0e0e0;
+
+    --app-h4: #b1b1b1;
+
+    --app-foo-text: #ffffff;
+    // forms
+    --app-border-color: #CCCCCC;
+    --app-text-color: #b9b9b9;
 }
 
 @media (prefers-color-scheme: dark){

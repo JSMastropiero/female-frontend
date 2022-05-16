@@ -1,96 +1,191 @@
 <app-header></app-header>
-<main>
-    <!-- presentation -->
-    <section class="text-center banner">
-        <owl-carousel-o [options]='customOptions'>
-            <ng-template carouselSlide><img src="assets/images/banner.png"></ng-template>
-            <ng-template carouselSlide><img src="assets/images/banner.png"></ng-template>
-            <ng-template carouselSlide><img src="assets/images/banner.png"></ng-template>
-        </owl-carousel-o>
+
+<!-- banner -->
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <owl-carousel-o [options]='customOptions'>
+                    <ng-template carouselSlide><img src="assets/images/banner.png"></ng-template>
+                    <ng-template carouselSlide><img src="assets/images/banner2.png"></ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<main class="container">
+    <!-- search -->
+    <section class="pt-4">
+        <div class="container search">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-sm-10">
+
+                    <mat-form-field appearance="outline">
+                        <input type="email" name="fm-search" autocomplete="doNotAutoComplete" matInput
+                            placeholder="¿ Qué buscas ?">
+                        <mat-icon matSuffix>search</mat-icon>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="container content">
-        <!-- Articles -->
-        <section class="margin">
-            <span class="title-section">
-                -- Artículos --
-            </span>
-            <!-- <p class="lead text-muted">Beneficios cama Ceragem.</p> -->
+    <!-- Articles -->
+    <section class="articles pt-2">
+        <div class="container">
 
-            <div class="articles">
-                <!-- Three columns of text below the carousel -->
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="parent-image">
-                            <div class="card-image" style="background-image: url('/assets/images/iam.png');"></div>
-                        </div>
-                        <h3>Beloved Mighty I AM Presence</h3>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="parent-image">
-                            <div class="card-image" style="background-image: url('/assets/images/ana.png');"></div>
-                        </div>
-                        <h3>Encuentros con Ana, la Abuela de Jesús</h3>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="parent-image">
-                            <div class="card-image" style="background-image: url('/assets/images/saint-germain.png');"></div>
-                        </div>
-                        <h3>Maestro Saint Germain</h3>
-                    </div>
+            <div class="row">
+                <div class="col title-section">
+                    Artículos
+                    <hr>
                 </div>
             </div>
-        </section>
-        <!-- Files -->
-        <section class="margin">
-            <span class="title-section">
-                -- Archivos --
-            </span>
 
-            <div class="row g-0 py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
+            <div class="row">
+                <div class="filter col-lg-3 offset-lg-9 text-lg-right col-sm-12 offset-sm-0 text-sm-center">
+                    <span class="pl-2 active">LO ÚLTIMO </span>
+                    <span class="pl-2">LO MÁS LEÍDO</span>
+                </div>
+            </div>
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <owl-carousel-o [options]='customOptions2' #owlCar>
+                    <ng-template carouselSlide>
+                        <div [routerLink]="['/article1']">
+                            <div class="parent-image">
+                                <div class="card-image" style="background-image: url('/assets/images/iam.png');">
+                                </div>
+                            </div>
+                            <h3>Beloved Mighty I AM Presence</h3>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div [routerLink]="['/article2']">
+                            <div class="parent-image">
+                                <div class="card-image" style="background-image: url('/assets/images/ana.png');">
+                                </div>
+                            </div>
+                            <h3>Encuentros con Ana, la Abuela de Jesús</h3>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div [routerLink]="['/article3']">
+                            <div class="parent-image">
+                                <div class="card-image"
+                                    style="background-image: url('/assets/images/saint-germain.png');">
+                                </div>
+                            </div>
+                            <h3 >Maestro Saint Germain</h3>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div [routerLink]="['/article4']">
+                            <div class="parent-image">
+                                <div class="card-image"
+                                    style="background-image: url('/assets/images/pascua.png');">
+                                </div>
+                            </div>
+                            <h3>Pascua de Resurrección</h3>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Files -->
+    <section class="pt-5">
+        <div class="container files">
+            <div class="row">
+                <div class="col title-section">
+                    Archivos
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <mat-tab-group mat-align-tabs="center">
+                        <div class="container-tab">
+                            <mat-tab *ngFor="let tab of tabs" label="{{tab}}">
+                                <div class="icon-files">
+                                    <ng-container *ngFor="let i of items">
+
+                                        <div class="item" mat-icon-button [matMenuTriggerFor]="menu">
+                                            <img mat-card-sm-image src="/assets/images/icon-file.png">
+                                            <div>Libro 1</div>
+                                        </div>
+
+                                        <div class="item" mat-icon-button [matMenuTriggerFor]="menu">
+                                            <img mat-card-sm-image src="/assets/images/audio.png">
+                                            <div>Audio.mp3</div>
+                                        </div>
+
+                                    </ng-container>
+
+                                </div>
+                            </mat-tab>
+
+                        </div>
+                    </mat-tab-group>
 
                 </div>
             </div>
-        </section>
 
-        <!-- plax2 -->
-        <section class="secction-plax1">
-            <span class="title-section">
-                -- Reflexiones --
-            </span>
-            <div class="plax1" >
-                <div class="col-lg-6 col-md-8 mx-auto text">
-                    <h1 class="fw-light">Si esta información te vibra y te resuena despertando con ella tus memorias de sintonía con la Divina Presencia “I AM”, 
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Descargar</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Ver Online</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Agregar a favorito</span>
+                </button>
+            </mat-menu>
+        </div>
+
+    </section>
+
+    <!-- reflextions -->
+    <section class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col title-section">
+                    Reflexiones
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col jarallax plax1">
+                    <img class="jarallax-img" src="/assets/images/plax.png" alt="">
+                    <h1>Si esta información te vibra y te resuena despertando con ella tus memorias de sintonía con
+                        la
+                        Divina Presencia “I AM”,
                         entonces eres bienvenid@ a este portal de Luz y Amor. </h1>
                 </div>
             </div>
-        </section>
-
-        <!-- footer -->
-        <footer class="">
-            <!-- <div class=""> -->
-                <h1>Secciones</h1>
-        
-                <p class="mb-0">
-                    MISIÓN<br>
-                    ACTIVIDAD<br>
-                    LLAMA VIOLETA CONSUMIDORA<br>
-                    LO QUE OFRECEMOS<br>
-                    MATERIAL DESCARGABLE<br>
-                </p>
-        
-                <!-- <p class="float-end mb-1">
-                    <a href="#">Subir</a>
-                </p> -->
-        
-            <!-- </div> -->
-        </footer>
-    </div>
-    <!-- content end -->
+        </div>
+    </section>
 
 
-
+    <!-- Newsletter justify-content-end -->
+    <section class="newsletter pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-8">
+                    <h4>SUSCRIBIRME</h4>
+                    <mat-form-field appearance="outline">
+                        <input type="email" name="somethingAutofillDoesntKnow" autocomplete="doNotAutoComplete" matInput
+                            placeholder="Ex. tucorreo@mail.com">
+                        <mat-icon matSuffix>mark_as_unread</mat-icon>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
-
+<app-footer></app-footer>

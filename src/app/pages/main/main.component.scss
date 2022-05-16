@@ -1,36 +1,39 @@
 @import "../../../styles/mixins.scss";
 
-.row {
-    max-width: 1600px;
-    margin: auto;
-}
+// .row {
+//     max-width: 1600px;
+//     margin: auto;
+// }
 
 .justify {
     text-align: justify;
 }
 
-.red {
-    color: red;
-}
 
-/* banner */
 
-section.banner {
-    // height: 40%;
-    // border: 1px solid #000099;
-    // background-color: #877333;
-    max-height: 512px;
-
-    owl-carousel-o {
-        img {
-            max-height: 512px;
-        }
-    }
-}
 
 ::ng-deep {
     .owl-theme .owl-nav [class*="owl-"] {
         background: unset !important;
+        
+    }
+
+    .banner{
+        
+        .row>* {
+            padding-right: 0;
+            padding-left: 0;
+            
+        }
+        .col{
+            @include ev-simply-shadow;
+        }
+    }
+
+    owl-carousel-o {
+        .owl-theme .owl-nav {
+            margin: 0px;
+        } 
     }
 
     .owl-prev {
@@ -49,93 +52,237 @@ section.banner {
         position: absolute;
         opacity: 0.8;
     }
+
+    $custom-main-color: red;
+    $custom-label-color: rgba(0, 0, 0, 0.6);
+
+    /* mat-form-field */
+
+    // border-radius 
+    .mat-form-field-outline-start {
+        border: 5px solid #b1b1b1;
+        border-radius: 8px 0 0 8px !important;
+        min-width: 28px !important;
+    }
+
+    .mat-form-field-outline-end {
+        border-radius: 0 8px 8px 0 !important;
+    }
+
+    // icon
+    mat-form-field{
+        mat-icon{
+            color: var(--app-text-color);
+            font-weight: 400;
+        }
+    }
+
+    // border width
+    .mat-form-field .mat-form-field-outline-start,
+    .mat-form-field .mat-form-field-outline-gap,
+    .mat-form-field .mat-form-field-outline-end {
+        color: var(--app-border-color);
+        border-width: 3px !important;
+    }
+
+    // mat-icon-stepper selected color change
+    .mat-step-header .mat-step-icon-selected,
+    .mat-step-header .mat-step-icon-state-done,
+    .mat-step-header .mat-step-icon-state-edit {
+        background-color: $custom-main-color !important;
+    }
+
+    .mat-form-field-infix {
+        border-top: 0.5em solid transparent;
+    }
+
+    // input outline color
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: $custom-main-color !important;
+    }
+
+    // mat-input focused color
+    .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+        color: $custom-main-color !important;
+    }
+
+    // mat-input error outline color
+    .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+        color: $custom-main-color !important;
+        opacity: 0.8 !important;
+    }
+
+    // mat-input caret color
+    .mat-input-element {
+        caret-color: $custom-main-color !important;
+    }
+
+    // mat-input error caret color
+    .mat-form-field-invalid .mat-input-element,
+    .mat-warn .mat-input-element {
+        caret-color: $custom-main-color !important;
+    }
+
+    // mat-label normal state style
+    .mat-form-field-label {
+        color: $custom-label-color !important;
+    }
+
+    // mat-label focused style
+    .mat-form-field.mat-focused .mat-form-field-label {
+        color: $custom-main-color !important;
+    }
+
+    // mat-label error style
+    .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+        color: $custom-main-color !important;
+    }
 }
 
-div.content {
-    background-color: var(--app-background-body);
-    margin-top: -20px;
-    padding: 55px 0 0 0;
-    
-    
-    height: 100%;
-    @include ev-simply-shadow;
-}
-
-section.margin{
-    margin: 0 16px;
-}
-
-.anchor {
-    display: flex;
-    height: 60px;
-    background-color: #f5f5ef;
-}
 
 .plax1 {
-    width: 100%;
-    height: auto;
-    background-image: url("/assets/images/plax.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    font-size: 16px;
-    color: #f5f5ef;
+    display: flex;
+    // flex-direction: column;
+    min-height: 280px;
+    // background-position: left;
+
+    h1 {
+        font-size: 21px;
+        color: #f5f5ef;
+        margin: auto 15% 5% 20%;
+        text-shadow: 1px 0px #969696;
+    }
 }
 
-.plax2 {
-    background-image: url("/assets/images/plax.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center, bottom;
-    color: white;
-}
 
-span.title-section {
+
+div.title-section {
+    text-transform: uppercase;
+
     text-align: left;
     // background-color: #F5B3B7;
     // background-repeat: no-repeat;
     // background-size: cover;
-    padding: 20px 15px;
+    padding: 8px 8px;
+    font-size: 0.9rem;
+    
     display: inline-block;
     // border-radius: 74px 30px;
-    color: var(--app-text);
+    color: var( --app-light-text);
     font-weight: 600;
-}
 
-.parent-image {
-    width: 100%;
-    height: 240px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: unset;
-    @include ev-simply-shadow;
-
-    .card-image {
-        // width: 100%;
-        margin: auto;
-        height: 100%;
-        // overflow: hidden;
-        
-        background-repeat: no-repeat;
-        background-size: cover;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -o-transition: all 0.5s;
-        transition: all 0.5s;
-        background-position: 10%, bottom;
-        
+    hr{
+        margin: 3px 0 0 0;
+        background-color:  rgba(0, 0, 0, 0.1);
     }
 
-    h3{
-        font-weight: 700;
+    // &::after {
+    //     color: gray;
+    //     content: "<hr>";
+    // }
+}
+
+.articles {
+    h3 {
+        text-align-last: center;
+    }
+
+    .filter {
+        span{
+            cursor: pointer;
+            font-size: 0.8rem;
+            &.active{
+                font-weight: 600;
+            }
+        }
+    }
+
+    .parent-image {
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: unset;
+        @include ev-simply-shadow;
+
+        .card-image {
+            // width: 100%;
+            margin: auto;
+            height: 100%;
+            // overflow: hidden;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            background-position: 10%, bottom;
+        }
     }
 }
 
 .parent-image:hover .card-image,
 .parent-image:focus .card-image {
     transform: scale(1.1);
+}
+
+/* search */
+.search {
+    mat-form-field {
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+/* files */
+.files {
+    .container-tab {
+        // display: inline-flex;
+        // background-color: var(--app-bg-tabs);
+        background-color: aqua !important;
+    }
+    mat-tab {
+    }
+    .icon-files {
+        display: flex;
+
+        .item {
+            margin: 8px;
+            max-width: 85px;
+            cursor: pointer;
+
+            img,
+            span {
+                display: inline-block;
+            }
+
+            img {
+                width: 85px;
+                height: 85px;
+                padding: 3px;
+                border: 1px solid #d2d2d2;
+                border-radius: 4px;
+            }
+            div {
+                text-align: center;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+/* newsletter*/
+
+.newsletter {
+
+    h4 {
+        color: var(--app-h4);
+        font-size: 1rem;
+    }
+    mat-form-field {
+        width: 100%;
+    }
 }
 
 /* tables */
@@ -153,26 +300,6 @@ span.title-section {
 }
 .left {
     text-align: left;
-}
-
-/* footer */
-
-footer {
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    width: 100%;
-    background-image: url("/assets/images/footer.svg");
-    background-position-x: right;
-    background-repeat: no-repeat;
-    color: white !important;
-    padding: 60px;
-    // .container {
-    //     background-image: url("/assets/images/footer.svg");
-    //     color: white !important;
-    //     padding: 60px;
-    // }
 }
 
 .mb-1 img,

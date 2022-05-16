@@ -3,7 +3,27 @@
 @import "./styles/colors.scss";
 @import "./styles/mixins.scss";
 
-body {
+body{
     background-color: var(--app-background);
-    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+    min-height: 100%;
+}
+
+main{
+    background-color: var(--app-background-body);
+    padding-bottom: 200px;
+    @include ev-simply-shadow;
+    min-height: 90vh;
+}
+
+hr{
+    margin: 8px 0;
+    background-color:  rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumbs{
+    cursor: pointer;
 }
