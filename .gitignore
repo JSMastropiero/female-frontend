@@ -55,3 +55,4 @@ baseline.json
 
 .angular*
 .angular/cache*
+.firebase*
