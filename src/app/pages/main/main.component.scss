@@ -187,6 +187,10 @@ div.title-section {
         text-align-last: center;
     }
 
+    mat-card {
+        margin-bottom: 10px;
+    }
+    
     .filter {
         span{
             cursor: pointer;
@@ -203,6 +207,7 @@ div.title-section {
         overflow: hidden;
         cursor: pointer;
         box-shadow: unset;
+        border-radius: 10px;
         @include ev-simply-shadow;
 
         .card-image {
@@ -220,6 +225,29 @@ div.title-section {
             background-position: 10%, bottom;
         }
     }
+
+
+    .comments { 
+        display:flex; 
+        justify-content: end;
+
+        h1 {
+            color: #b1b1b1;
+            font-size: 15px;
+            font-weight: bolder;
+        } 
+    }  
+}
+  
+.submit-date {
+    display:inline-flex;
+    color: white;
+    background-color: #644794b1;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .parent-image:hover .card-image,
@@ -402,3 +430,4 @@ div.title-section {
         overflow: hidden;
     }
 }
+
