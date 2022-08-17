@@ -25,7 +25,7 @@ import { Article4Component } from './pages/article4/article4.component';
     Article1Component,
     Article2Component,
     Article3Component,
-    Article4Component
+    Article4Component,
   ],
   imports: [
     BrowserModule,
