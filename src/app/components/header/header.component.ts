@@ -8,16 +8,18 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class HeaderComponent implements OnInit {
 
+  public active : boolean = false;
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  openDialog(templateRef: any) {
-    let dialogRef = this.dialog.open(templateRef, {
-      width: '400',
-      height: 'auto',
-      autoFocus: false
+  openDialog(modal:any) {
+    const dialogRef = this.dialog.open(modal);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
 
