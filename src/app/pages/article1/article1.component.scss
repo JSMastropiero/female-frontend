@@ -33,6 +33,11 @@
         max-width: 100%;
         border-radius: 4px;
     }
+    h3 {
+        font-size: 50px;
+        font-weight: 500; 
+        color: rgb(66, 4, 66);
+    }
 }
 
 hr.color{
@@ -41,10 +46,11 @@ hr.color{
 }
 
 .article-text{
+    height:700px;
     padding: 0 12px 0 0;
     letter-spacing: 0.8px;
     line-height: 1.3;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .top-news{
@@ -136,4 +142,58 @@ mat-card h3 {
 
 .spacing-card {
     margin-bottom: 15px;
+}
+
+// COMMENTS
+.picture-comment {
+    background-color: #fff9f90e;
+    display: flex;
+    justify-content: left;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+
+    .testimony {
+        display: flex;
+        align-items: center; 
+        line-height: 23px;   
+        margin-left: 10px;
+        
+        .comment-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #5223aa;
+        }
+
+        .comment-date {
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.667);
+        }
+    }
+    .comment-task {
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+
+// LEAVE A COMENNT
+.comment-space {
+   
+    padding: 15px;
+    
+
+    .col-left {
+        display: flex;
+        justify-content: start;
+    }
+
+    .col-right {
+        display: flex;
+        justify-content: end;
+    }
+
+    .input-message {
+        width: 100%;
+    }
 }

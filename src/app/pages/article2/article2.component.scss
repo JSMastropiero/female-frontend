@@ -33,6 +33,11 @@
         max-width: 100%;
         border-radius: 4px;
     }
+    h3 {
+        font-size: 50px;
+        font-weight: 500; 
+        color: rgb(66, 4, 66);
+    }
 }
 
 hr.color{
@@ -165,5 +170,26 @@ mat-card h3 {
     .comment-task {
         font-size: 20px;
         padding: 20px;
+    }
+}
+
+// LEAVE A COMENNT
+.comment-space {
+   
+    padding: 15px;
+    
+
+    .col-left {
+        display: flex;
+        justify-content: start;
+    }
+
+    .col-right {
+        display: flex;
+        justify-content: end;
+    }
+
+    .input-message {
+        width: 100%;
     }
 }
