@@ -1,0 +1,94 @@
+<app-header></app-header>
+<main class="container">
+    <div class="row">
+        <div class="col article-title">
+            <span>Artículos</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col breadcrumbs">
+            <span [routerLink]="['/']">Inicio</span>
+            <span>|</span>
+            <span>Artículos</span>
+            <span>|</span>
+            <span class="active"> Biblioteca</span>
+        </div>
+    </div>
+    <hr>
+    <div class="container header-art">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12 pt-5">
+                <div class="date text-center">1 Mayo 2022</div>
+                <div class="title text-center pt-3">
+                    <h3>
+                        Biblioteca
+                    </h3>
+                </div>
+                <div class="favorite text-center pt-5">Agrega a favoritos</div>
+                <div class="networks text-center pt-3">
+                    <img src="/assets/images/networks2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="color">
+    <div class="container">
+        <div class="row">
+                <!-- Files -->
+    <section class="pt-5">
+        <div class="container files">
+            <div class="row">
+                <!-- <div class="col title-section">
+                    Archivos
+                    <hr>
+                </div> -->
+            </div>
+
+            <div class="row library-setup">
+                <div class="col-12">
+                    <mat-tab-group mat-align-tabs="center">
+                        <div class="container-tab">
+                            <mat-tab *ngFor="let tab of tabs" label="{{tab}}">
+                                <div class="icon-files">
+                                    <ng-container *ngFor="let i of items">
+
+                                        <div class="item" mat-icon-button [matMenuTriggerFor]="menu">
+                                            <img mat-card-sm-image src="/assets/images/icon-file.png">
+                                            <div>Libro 1</div>
+                                        </div>
+
+                                        <div class="item" mat-icon-button [matMenuTriggerFor]="menu">
+                                            <img mat-card-sm-image src="/assets/images/audio.png">
+                                            <div>Audio.mp3</div>
+                                        </div>
+
+                                    </ng-container>
+
+                                </div>
+                            </mat-tab>
+
+                        </div>
+                    </mat-tab-group>
+
+                </div>
+            </div>
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Descargar</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Ver Online</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Agregar a favorito</span>
+                </button>
+            </mat-menu>
+        </div>
+
+    </section>
+        </div>
+    </div>
+
+</main>
+<app-footer></app-footer>
