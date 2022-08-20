@@ -49,69 +49,10 @@
                     de oro que ya ha comenzado
 
                 </div>
-            </div>
-            <div class="col-sm-12 col-lg-4 top-news text-right">            
-                <!-- <img [routerLink]="['/']" src="/assets/images/col-news.png" alt="" class="src"> -->
-                <div class="row" >
-                    <div class="col-6 card-start">
-                        <span class="pl-2 active">LO ÚLTIMO </span>
-                    </div>
-                    <div class="col-6">
-                        <span class="pl-2">LO MÁS LEÍDO</span>
-                    </div>
-                    <div class="spacing-card" [routerLink]="['/article1']">
-                        <mat-card>
-                            <div class="submit-date">
-                                29 Marzo 2022
-                             </div>
-                            <div class="parent-image">
-                                <div class="card-image" style="background-image: url('/assets/images/iam.png');">
-                                </div>
-                            </div>
-                            <h3>Beloved Mighty I AM Presence</h3>
-                            <div class="comments">
-                                <h1>8 comentarios</h1>
-                            </div>
-                        </mat-card>
-                    </div>
-                    <div class="spacing-card" [routerLink]="['/article2']">
-                        <mat-card >
-                            <div class="submit-date">
-                                29 Marzo 2022
-                             </div>
-                            <div class="parent-image">
-                                <div class="card-image" style="background-image: url('/assets/images/ana.png');">
-                                </div>
-                            </div>
-                            <h3>Encuentros con Ana, la Abuela de Jesús</h3>
-                            <div class="comments">
-                                <h1>9 comentarios</h1>
-                            </div>
-                        </mat-card>
-                    </div>
-                    <div  class="spacing-card" [routerLink]="['/article3']">
-                        <mat-card>
-                            <div class="submit-date"> 
-                                29 Marzo 2022
-                             </div>
-                            <div class="parent-image">
-                                <div class="card-image"
-                                    style="background-image: url('/assets/images/saint-germain.png');">
-                                </div>
-                            </div>
-                            <h3 >Maestro Saint Germain</h3>
-                            <div class="comments">
-                                <h1>11 comentarios</h1>
-                            </div>
-                        </mat-card>
-                    </div>
-                    <!-- <div class="filter col-lg-3 offset-lg-9 text-lg-right col-sm-12 offset-sm-0 text-sm-center">
-                        <span class="pl-2 active">LO ÚLTIMO </span>
-                        <span class="pl-2">LO MÁS LEÍDO</span>
-                    </div> -->
-                </div>
-
-            </div>
+            </div>         
+            <div class="col-4">
+                <app-news></app-news>
+            </div>    
         </div>
     </div>
 </main>
