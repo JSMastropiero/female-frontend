@@ -47,7 +47,7 @@ hr.color{
 }
 
 .article-text{
-    height: 700px;
+    height: auto;
     font-size: 20px;
     padding: 0 12px 0 0;
     letter-spacing: 0.8px;
@@ -122,4 +122,13 @@ hr.color{
     }
 }
 
-
+@media (max-width: 734px) {
+    .article-container {
+        border-right: none;
+      }
+    .text-center {
+        h3 {
+            font-size: 35px;
+        }
+    }
+}

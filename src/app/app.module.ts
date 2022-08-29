@@ -15,6 +15,13 @@ import { Article2Component } from './pages/article2/article2.component';
 import { Article3Component } from './pages/article3/article3.component';
 import { Article4Component } from './pages/article4/article4.component';
 import { NewsComponent } from './components/news/news.component';
+import { OfferComponent } from './pages/offer/offer.component';
+import { ActivityComponent } from './pages/activity/activity.component';
+import { MissionComponent } from './pages/mission/mission.component';
+import { VioletComponent } from './pages/violet/violet.component';
+import { LibraryComponent } from './pages/library/library.component';
+import { CoursesComponent } from './pages/courses/courses.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +35,13 @@ import { NewsComponent } from './components/news/news.component';
     Article3Component,
     Article4Component,
     NewsComponent,
+    OfferComponent,
+    ActivityComponent,
+    MissionComponent,
+    VioletComponent,
+    LibraryComponent,
+    CoursesComponent,
+    CommentsComponent,
   ],
   imports: [
     BrowserModule,

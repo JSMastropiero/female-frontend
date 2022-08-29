@@ -17,11 +17,14 @@
                         <a class="nav-link" (click)="openDialog(form)">Inscripciones</a>
                     </li>
                     <li [routerLink]="['/article']" class="nav-item">
-                        <a class="nav-link">Cursos</a>
+                        <a class="nav-link" href="/courses">Cursos</a>
                     </li>
                     <li [routerLink]="['/article']" class="nav-item">
-                        <a class="nav-link">Archivos</a>
+                        <a class="nav-link" href="/library">Biblioteca</a>
                     </li>
+                    <!-- <li [routerLink]="['/article']" class="nav-item">
+                        <a class="nav-link">Archivos</a>
+                    </li> -->
                     <li [routerLink]="['/article']" class="nav-item" mat-icon-button [matMenuTriggerFor]="menu">
                         <a class="nav-link">¿Quienes somos?</a>
                     </li>
@@ -32,16 +35,16 @@
 
                     <mat-menu #menu="matMenu">
                         <button mat-menu-item>
-                            <span>Lo que te Ofrecemos</span>
+                            <span ><a href="/offer">Lo que te Ofrecemos</a></span>
                         </button>
                         <button mat-menu-item>
-                            <span>Actividad</span>
+                            <span><a href="/activity">Actividad</a></span>
                         </button>
                         <button mat-menu-item>
-                            <span>Misión</span>
+                            <span><a href="/mission">Misión</a></span>
                         </button>
                         <button mat-menu-item>
-                            <span>Llama Violeta</span>
+                            <span><a href="/violet">Llama Violeta</a></span>
                         </button>
                     </mat-menu>
                 </ul>
