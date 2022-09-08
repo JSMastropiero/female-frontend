@@ -60,3 +60,16 @@ div.content-modal {
    color: #79609C;
    margin-left: -15px;
 }
+
+
+@media (max-width: 734px) {
+    .content-modal {
+        input {
+            width: auto;
+        }
+    }
+  }
+
+
+
+

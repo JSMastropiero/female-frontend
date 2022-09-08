@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class HeaderComponent implements OnInit {
 
+  public isCollapsed = false;
   public active : boolean = false;
 
   constructor(public dialog: MatDialog) { }
