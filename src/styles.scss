@@ -2,7 +2,7 @@
 // @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import "./styles/colors.scss";
 @import "./styles/mixins.scss";
-
+@import "../node_modules/bootstrap/scss/bootstrap";
 body{
     background-color: var(--app-background);
     position: relative;

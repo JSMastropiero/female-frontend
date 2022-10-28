@@ -22,16 +22,13 @@
                     <li [routerLink]="['/article']" class="nav-item">
                         <a class="nav-link" href="/library">Biblioteca</a>
                     </li>
-                    <!-- <li [routerLink]="['/article']" class="nav-item">
-                        <a class="nav-link">Archivos</a>
-                    </li> -->
                     <li [routerLink]="['/article']" class="nav-item" mat-icon-button [matMenuTriggerFor]="menu">
                         <a class="nav-link">¿Quienes somos? </a>
                     </li>
                     <li class="nav-item">
                         <button mat-raised-button class="login">Iniciar Sesión</button>
                     </li>
-
+                    
 
                     <mat-menu #menu="matMenu">
                         <button mat-menu-item>
@@ -52,6 +49,8 @@
         </div>
     </nav>
 </header>
+
+
 
 <ng-template #form>
     <div class="content-modal">
@@ -88,3 +87,5 @@
         </div>
     </div>
 </ng-template>
+
+  

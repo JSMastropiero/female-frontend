@@ -22,6 +22,7 @@ import { VioletComponent } from './pages/violet/violet.component';
 import { LibraryComponent } from './pages/library/library.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { ResponsiveHeaderComponent } from './components/responsive-header/responsive-header.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     LibraryComponent,
     CoursesComponent,
     CommentsComponent,
+    ResponsiveHeaderComponent,
   ],
   imports: [
     BrowserModule,
