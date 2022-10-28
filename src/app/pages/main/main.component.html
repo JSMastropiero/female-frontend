@@ -54,40 +54,72 @@
                 <owl-carousel-o [options]='customOptions2' #owlCar>
                     <ng-template carouselSlide>
                         <div [routerLink]="['/article1']">
-                            <div class="parent-image">
-                                <div class="card-image" style="background-image: url('/assets/images/iam.png');">
+                            <mat-card>
+                                <div class="submit-date">
+                                    29 Marzo 2022
+                                 </div>
+                                <div class="parent-image">
+                                    <div class="card-image" style="background-image: url('/assets/images/iam.png');">
+                                    </div>
                                 </div>
-                            </div>
-                            <h3>Beloved Mighty I AM Presence</h3>
+                                <h3>Beloved Mighty I AM Presence</h3>
+                                <div class="comments">
+                                    <h1>8 comentarios</h1>
+                                </div>
+                            </mat-card>
                         </div>
                     </ng-template>
                     <ng-template carouselSlide>
                         <div [routerLink]="['/article2']">
-                            <div class="parent-image">
-                                <div class="card-image" style="background-image: url('/assets/images/ana.png');">
+                            <mat-card >
+                                <div class="submit-date">
+                                    29 Marzo 2022
+                                 </div>
+                                <div class="parent-image">
+                                    <div class="card-image" style="background-image: url('/assets/images/ana.png');">
+                                    </div>
                                 </div>
-                            </div>
-                            <h3>Encuentros con Ana, la Abuela de Jesús</h3>
+                                <h3>Encuentros con Ana, la Abuela de Jesús</h3>
+                                <div class="comments">
+                                    <h1>9 comentarios</h1>
+                                </div>
+                            </mat-card>
                         </div>
                     </ng-template>
                     <ng-template carouselSlide>
                         <div [routerLink]="['/article3']">
-                            <div class="parent-image">
-                                <div class="card-image"
-                                    style="background-image: url('/assets/images/saint-germain.png');">
+                            <mat-card>
+                                <div class="submit-date">
+                                    29 Marzo 2022
+                                 </div>
+                                <div class="parent-image">
+                                    <div class="card-image"
+                                        style="background-image: url('/assets/images/saint-germain.png');">
+                                    </div>
                                 </div>
-                            </div>
-                            <h3 >Maestro Saint Germain</h3>
+                                <h3 >Maestro Saint Germain</h3>
+                                <div class="comments">
+                                    <h1>11 comentarios</h1>
+                                </div>
+                            </mat-card>
                         </div>
                     </ng-template>
                     <ng-template carouselSlide>
                         <div [routerLink]="['/article4']">
-                            <div class="parent-image">
-                                <div class="card-image"
-                                    style="background-image: url('/assets/images/pascua.png');">
+                            <mat-card>
+                                <div class="submit-date">
+                                    29 Marzo 2022
+                                 </div>
+                                <div class="parent-image">
+                                    <div class="card-image"
+                                        style="background-image: url('/assets/images/pascua.png');">
+                                    </div>
                                 </div>
-                            </div>
-                            <h3>Pascua de Resurrección</h3>
+                                <h3>Pascua de Resurrección</h3>
+                                <div class="comments">
+                                    <h1>13 comentarios</h1>
+                                </div>
+                            </mat-card>
                         </div>
                     </ng-template>
                 </owl-carousel-o>
@@ -176,8 +208,8 @@
     <section class="newsletter pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 offset-lg-8">
-                    <h4>SUSCRIBIRME</h4>
+                <div class="col-lg-4 offset-lg-4">
+                    <h4 class="offset-lg-4">SUSCRIBIRME</h4>
                     <mat-form-field appearance="outline">
                         <input type="email" name="somethingAutofillDoesntKnow" autocomplete="doNotAutoComplete" matInput
                             placeholder="Ex. tucorreo@mail.com">
@@ -189,3 +221,5 @@
     </section>
 </main>
 <app-footer></app-footer>
+
+<app-responsive-header></app-responsive-header>

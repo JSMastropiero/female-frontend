@@ -1,0 +1,78 @@
+<app-header></app-header>
+<main class="container">
+    <div class="row">
+        <div class="col article-title">
+            <span>¿Quiénes somos?</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col breadcrumbs">
+            <span [routerLink]="['/']">Inicio</span>
+            <span>|</span>
+            <span>Artículos</span>
+            <span>|</span>
+            <span class="active"> Lo que ofrecemos</span>
+        </div>
+    </div>
+    <hr>
+    <div class="container header-art">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 text-center">
+                <img src="/assets/images/icon.png">
+            </div>
+            <div class="col-sm-12 col-lg-6 pt-5">
+                <div class="date text-center">1 Mayo 2022</div>
+                <div class="title text-center pt-3">
+                    <h3>
+                        Lo que te ofrecemos
+                    </h3>
+                </div>
+                <div class="favorite text-center pt-5">Agrega a favoritos</div>
+                <div class="networks text-center pt-3">
+                    <img src="/assets/images/networks2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="color">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-sm-12 col-lg-8 article-container">
+                <div class="article-text">
+                    <p>
+                    En este blog podrás descargar en forma gratuita, la trilogía de Libros 
+                    de Saint Germain en los cuales se cuenta la historia de cómo llegaron estas 
+                    Enseñanzas a la humanidad por última vez, ya que el Tiempo Cósmico señala el 
+                    inicio de una Nueva Era que ha de ser espiritual o no será. Libre albedrío de 
+                    nuestra parte.
+                    </p>
+                    <p>
+                    La Presencia Mágica / Misterios Desvelados / Discursos También tendrás acceso a 
+                    una música de altísima frecuencia para que acompañes tus prácticas y que fue canalizada 
+                    con códigos transmitidos por María Magdalena. Esta música además de elevarnos, 
+                    contiene claves sanadoras.
+                    </p>
+                    <p>
+                    Cada cierto tiempo, iremos subiendo prácticas, lecturas, ejercicios y todo 
+                    lo que consideremos necesario para el avance.
+                    </p>
+                    <p>
+                    Esperamos de todo corazón llegar a todas las personas que sabiéndolo o no,
+                    encuentren es este lugar una fuente luminosa de la cual nutrirse.
+                    </p>
+                    ¡En la Luz de nuestra Bienamada Poderosa Presencia ‘I AM’ que jamás falla!
+                </div>
+
+                <!-- COMMENTS -->
+                <app-comments></app-comments>
+
+
+            </div>         
+            <div class="col-lg-4 col-sm-12">
+                <app-news></app-news>
+            </div>    
+        </div>
+    </div>
+
+</main>
+<app-footer></app-footer>

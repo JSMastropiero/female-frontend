@@ -1,0 +1,65 @@
+<app-header></app-header>
+<main class="container">
+    <div class="row">
+        <div class="col article-title">
+            <span>¿Quiénes somos?</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col breadcrumbs">
+            <span [routerLink]="['/']">Inicio</span>
+            <span>|</span>
+            <span>Artículos</span>
+            <span>|</span>
+            <span class="active">Violeta</span>
+        </div>
+    </div>
+    <hr>
+    <div class="container header-art">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 text-center">
+                <img src="/assets/images/icon.png">
+            </div>
+            <div class="col-sm-12 col-lg-6 pt-5">
+                <div class="date text-center">1 Mayo 2022</div>
+                <div class="title text-center pt-3">
+                    <h3>
+                        LLama Violeta Creadora
+                    </h3>
+                </div>
+                <div class="favorite text-center pt-5">Agrega a favoritos</div>
+                <div class="networks text-center pt-3">
+                    <img src="/assets/images/networks2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="color">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-sm-12 col-lg-8 article-container">
+                <div class="article-text">
+                    <p>
+                        No hay palabras que puedan describir la Acción Dinámica de la Llama Violeta 
+                        Consumidora en nuestras vidas.                        
+                    </p>
+                    <p>  
+                        Si estás dispuest@ a probar el Llamado a la Fuerza Cósmica de Amor de la 
+                        Llama Violeta, descubrirás cómo se vive en libertad de tus propias cadenas y 
+                        de aquellas que has aceptado durante demasiado tiempo. 
+                    </p>
+                </div>
+
+                <!-- COMMENTS -->
+                <app-comments></app-comments>
+
+
+            </div>         
+            <div class="col-lg-4 col-sm-4">
+                <app-news></app-news>
+            </div>    
+        </div>
+    </div>
+
+</main>
+<app-footer></app-footer>

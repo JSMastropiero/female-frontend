@@ -37,24 +37,29 @@
     </div>
     <hr class="color">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-lg-8 pt-5">
-                <div class="article-text text-justify">
+        <div class="row pt-4">
+            <div class="col-sm-12 col-lg-8 article-container">
+                <div class="article-text">
+                    <p>
                     I AM es una invocación de nuestra divinidad individualizada eterna y perfecta.
-
+                    </p>
+                    <p>
                     Es una vibración por lo que No tiene traducción.
-
+                    </p>
+                    <p>
                     Para vuestra comprensión y aplicación, nuestra invitación es leer la maravillosa trilogía del
                     maestro Saint Germain, donde encontrarán la Verdad de la Vida y la preparación para esta nueva edad
                     de oro que ya ha comenzado
-
+                    </p>
                 </div>
-            </div>
-            <div class="col-sm-12 col-lg-4 pt-5 top-news text-right">
-                <img [routerLink]="['/']" src="/assets/images/col-news.png" alt="" class="src">
-            </div>
+
+                <app-comments></app-comments>
+
+            </div>         
+            <div class="col-lg-4 col-sm-12">
+                <app-news></app-news>
+            </div>    
         </div>
     </div>
-
 </main>
 <app-footer></app-footer>

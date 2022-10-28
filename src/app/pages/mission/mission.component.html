@@ -1,0 +1,84 @@
+<app-header></app-header>
+<main class="container">
+    <div class="row">
+        <div class="col article-title">
+            <span>¿Quiénes somos?</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col breadcrumbs">
+            <span [routerLink]="['/']">Inicio</span>
+            <span>|</span>
+            <span>Artículos</span>
+            <span>|</span>
+            <span class="active">Misión</span>
+        </div>
+    </div>
+    <hr>
+    <div class="container header-art">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 text-center">
+                <img src="/assets/images/icon.png">
+            </div>
+            <div class="col-sm-12 col-lg-6 pt-5">
+                <div class="date text-center">1 Mayo 2022</div>
+                <div class="title text-center pt-3">
+                    <h3>
+                        Misión
+                    </h3>
+                </div>
+                <div class="favorite text-center pt-5">Agrega a favoritos</div>
+                <div class="networks text-center pt-3">
+                    <img src="/assets/images/networks2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="color">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-sm-12 col-lg-8 article-container">
+                <div class="article-text">
+                    <p>
+                        Este blog tiene como finalidad poner al alcance de todas las personas, la información que 
+                        hace 90 años (1930) fue entregada a la humanidad por el Maestro Saint Germain, con el fin 
+                        de que cada ser humano pudiera encontrar el camino a la Ascensión. 
+                    </p>
+                    <p>  
+                        Si esta información te vibra y te resuena despertando con ella tus memorias de sintonía 
+                        con la Divina Presencia “I AM”, entonces eres bienvenid@ a este portal de Luz y Amor. 
+                        Somos un grupo de 144 personas que desde el año 2013 nos hemos convocado con la única 
+                        intención de Decretar el bien mayor para la humanidad, utilizando las Enseñanzas que el 
+                        Maestro nos ha legado.  
+                    </p>
+                    <p>
+                        Sin fines de recibir beneficios personales de ningún tipo –incluido dinero-, estamos 
+                        organizados para realizar un Servicio de amor incondicional y desinteresado para nuestros 
+                        hermanos que habitan el planeta en esta y otras dimensiones y también para cada uno de nosotros, 
+                        nuestro entorno y nuestros asuntos. 
+                    </p>
+                    <p>
+                        Con ese fin, sostenemos Servicios de Decretos diarios desde Chile –lugar en el que se origina 
+                        esta Actividad- Argentina, Uruguay, México, Estados Unidos de Norteamérica, España, Suiza, India y África. 
+                        Estamos convencid@s de que el Amor y la Luz se imponen por presencia y que actuar desde la 
+                        maestría de transmutar con la Llama Violeta emociones y pensamientos para elevarlos a la 
+                        Perfección de la Fuente PadreMadre, nos dará la tan anhelada Libertad personal y colectiva 
+                        en forma definitiva. El karma no es otra cosa que las acumulaciones de energía emocional e 
+                        intelectual mal calificadas en todas nuestras formas de existencia. La Llama Violeta es el 
+                        regalo que hoy tenemos para saldar el karma. En amor y con Amor.
+                    </p>
+                </div>
+
+                <!-- COMMENTS -->
+                <app-comments></app-comments>
+
+
+            </div>         
+            <div class="col-lg-4 col-sm-4">
+                <app-news></app-news>
+            </div>    
+        </div>
+    </div>
+
+</main>
+<app-footer></app-footer>

@@ -17,31 +17,31 @@
                         <a class="nav-link" (click)="openDialog(form)">Inscripciones</a>
                     </li>
                     <li [routerLink]="['/article']" class="nav-item">
-                        <a class="nav-link">Cursos</a>
+                        <a class="nav-link" href="/courses">Cursos</a>
                     </li>
                     <li [routerLink]="['/article']" class="nav-item">
-                        <a class="nav-link">Archivos</a>
+                        <a class="nav-link" href="/library">Biblioteca</a>
                     </li>
                     <li [routerLink]="['/article']" class="nav-item" mat-icon-button [matMenuTriggerFor]="menu">
-                        <a class="nav-link">¿Quienes somos?</a>
+                        <a class="nav-link">¿Quienes somos? </a>
                     </li>
                     <li class="nav-item">
                         <button mat-raised-button class="login">Iniciar Sesión</button>
                     </li>
-
+                    
 
                     <mat-menu #menu="matMenu">
                         <button mat-menu-item>
-                            <span>Lo que te Ofrecemos</span>
+                            <span ><a href="/offer">Lo que te Ofrecemos</a></span>
                         </button>
                         <button mat-menu-item>
-                            <span>Actividad</span>
+                            <span><a href="/activity">Actividad</a></span>
                         </button>
                         <button mat-menu-item>
-                            <span>Misión</span>
+                            <span><a href="/mission">Misión</a></span>
                         </button>
                         <button mat-menu-item>
-                            <span>Llama Violeta</span>
+                            <span><a href="/violet">Llama Violeta</a></span>
                         </button>
                     </mat-menu>
                 </ul>
@@ -50,13 +50,15 @@
     </nav>
 </header>
 
+
+
 <ng-template #form>
     <div class="content-modal">
         <div mat-dialog-title class="close">
             <mat-icon mat-button mat-dialog-close matSuffix>highlight_off</mat-icon>
         </div>
         <div mat-dialog-content>
-            <div>Inscripciones</div>
+            <div class="contact-form">CONTÁCTANOS</div>
             <hr>
             <div class="pt-4">
                 <form class="form">
@@ -85,3 +87,5 @@
         </div>
     </div>
 </ng-template>
+
+  
