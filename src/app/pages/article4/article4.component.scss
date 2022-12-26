@@ -13,6 +13,12 @@
 }
 
 
+.title {
+    h4 {
+        font-size: 30px;
+    }
+}
+
 .breadcrumbs{
     display: flex;
     height: 50px;
@@ -48,7 +54,7 @@ hr.color{
 
 .article-text{
     height: auto;
-    font-size: 20px;
+    font-size: 17px;
     padding: 0 12px 0 0;
     letter-spacing: 0.8px;
     line-height: 1.3;
