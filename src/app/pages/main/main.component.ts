@@ -24,6 +24,7 @@ export class MainComponent implements OnInit {
   message_tmp:any;
   status_tmp:any;
 
+
   tabs = ['TODOS', 'VIDEOS', 'AUDIOS' , 'LIBROS', 'DOCUMENTOS']
   items = [0,1,2,3]
   items2 = [0,1,2]
@@ -74,25 +75,27 @@ export class MainComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-  ) { }
+  ) { 
+  }
 
   ngOnInit(): void {
     jarallax(document.querySelectorAll('.jarallax'), {
       speed: 0.8,
       imgPosition: "left bottom"
     });
-    
+
+    //API
+    /*
     this.apiService.getFemaleData().subscribe(
       data => {
-        console.log("this data : ", data);           
+        this.femaleData = data;         
         console.log(this.femaleData)
 			},
 			error => {
 				console.log('error', error);
 				this.message_tmp = '¡Ocurrió un problema, por favor intente nuevamente!';
-				this.status_tmp = 'alert-danger';
 			}
-    );
+    );*/
   }
 
 }
