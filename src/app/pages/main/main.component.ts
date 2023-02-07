@@ -3,7 +3,14 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 // import { jarallax, jarallaxElement } from 'jarallax';
 import 'jarallax';
 import { CarouselService } from 'ngx-owl-carousel-o/lib/services/carousel.service';
+import { ApiService } from 'src/app/services/services.service';
 declare var jarallax: any;
+
+export interface Data_ {
+  name: string;
+  code: number;
+  cell_value: number;
+}
 
 @Component({
   selector: 'app-main',
@@ -12,6 +19,10 @@ declare var jarallax: any;
 })
 export class MainComponent implements OnInit {
   @ViewChild('owlCar') carousel!: any;
+
+  femaleData: any = [];
+  message_tmp:any;
+  status_tmp:any;
 
   tabs = ['TODOS', 'VIDEOS', 'AUDIOS' , 'LIBROS', 'DOCUMENTOS']
   items = [0,1,2,3]
@@ -61,15 +72,27 @@ export class MainComponent implements OnInit {
     nav: true
   }
 
-  constructor() { }
+  constructor(
+    private apiService: ApiService,
+  ) { }
 
   ngOnInit(): void {
     jarallax(document.querySelectorAll('.jarallax'), {
       speed: 0.8,
       imgPosition: "left bottom"
     });
-
     
+    this.apiService.getFemaleData().subscribe(
+      data => {
+        console.log("this data : ", data);           
+        console.log(this.femaleData)
+			},
+			error => {
+				console.log('error', error);
+				this.message_tmp = '¡Ocurrió un problema, por favor intente nuevamente!';
+				this.status_tmp = 'alert-danger';
+			}
+    );
   }
 
 }
