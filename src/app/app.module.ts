@@ -23,6 +23,7 @@ import { LibraryComponent } from './pages/library/library.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { ResponsiveHeaderComponent } from './components/responsive-header/responsive-header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ResponsiveHeaderComponent } from './components/responsive-header/respon
     BrowserAnimationsModule,
     CarouselModule,
     AngularMaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
