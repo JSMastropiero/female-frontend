@@ -24,6 +24,11 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { ResponsiveHeaderComponent } from './components/responsive-header/responsive-header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ArticleService } from './services/article.service';
+import { CommentService } from './services/comment.service';
+import { FilesService } from './services/file.service';
+import { UsersService } from './services/users.service';
+import { AuthService } from './services/token.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +59,13 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ArticleService,
+    CommentService,
+    FilesService,
+    UsersService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

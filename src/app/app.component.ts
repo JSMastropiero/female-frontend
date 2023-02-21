@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './services/services.service';
-import { UsersService } from './services/users/users.service';
+import { UsersService } from './services/users.service';
 
 @Component({
   selector: 'app-root',
